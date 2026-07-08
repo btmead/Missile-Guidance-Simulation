@@ -1,0 +1,46 @@
+```gitignore
+# MATLAB autosave and temporary files
+*.asv
+*.m~
+*.tmp
+*.bak
+
+# MATLAB generated folders
+slprj/
+**/slprj/
+codegen/
+**/codegen/
+
+# Simulink cache and generated files
+*.slxc
+*.mex*
+*.sldasm.dmr
+*.sldasm.fslck
+*.slx.autosave
+
+# MATLAB data outputs
+*.mat
+
+# Large/generated render outputs
+_rendered*/
+**/_rendered*/
+
+# Logs and temporary results
+*.log
+*.dat
+*.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Office temporary files
+~$*
+
+#Codex Files
+Codex/
+**/Codex/
+
+#Math formula sheets
+Guidance Math Reference.docx
