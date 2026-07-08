@@ -8,9 +8,9 @@ This project contains engineering simulations related to tactical and strategic 
 
 ## Main Contents
 
-- `MATLAB Files/TwoD_Missile_Sim.m` - 2D missile-target engagement simulation
-- `MATLAB Files/Linearised_engagement_sim.m` - linearised engagement model
-- `MATLAB Files/Single_lag_adjoint_monte_carlo.m` - Monte Carlo adjoint analysis
+- `MATLAB Files/Scripts/two_d_missile_sim.m` - 2D missile-target engagement simulation
+- `MATLAB Files/Scripts/linearised_engagement_sim.m` - linearised engagement model
+- `MATLAB Files/Scripts/single_lag_adjoint_monte_carlo.m` - Monte Carlo adjoint analysis
 - `MATLAB Files/Covariance Analysis/` - homing loop covariance analysis
 - `MATLAB Files/Results/` - selected simulation outputs and figures
 
@@ -27,4 +27,5 @@ Open the project folder in MATLAB and run the relevant script from the `MATLAB F
 Example:
 
 ```matlab
-TwoD_Missile_Sim
+two_d_missile_sim
+```
