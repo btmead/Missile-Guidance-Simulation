@@ -5,7 +5,7 @@ function check = savedata(name, results, figure, runID)
 
     functions_folder = fileparts(mfilename('fullpath'));
     matlab_folder = fileparts(functions_folder);
-    output_folder = fullfile(matlab_folder, name, 'Results');
+    output_folder = fullfile(matlab_folder, 'Results', name);
 
     results_name = runID + ' Results.mat';
     figure_name = runID + ' Figure.fig';
