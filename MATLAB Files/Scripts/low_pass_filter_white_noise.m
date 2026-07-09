@@ -5,8 +5,8 @@ close all
 %rng(1); %Seed number (use for debugging)
 
 %% Parameters
-p.tau_s = 0.45;
-p.spectral_density = 1.3;
+p.tau_s = 0.2;
+p.spectral_density = 1;
 p.integration_step_s = 0.01;
 p.t_final_s = 100;
 p.sigma = sqrt(p.spectral_density / p.integration_step_s);

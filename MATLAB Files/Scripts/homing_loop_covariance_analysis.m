@@ -12,6 +12,7 @@ p.target_accel_mps2 = 3 * p.G;
 p.t_initial_s = 1e-5;
 p.h = 0.0001;
 
+
 t_s = p.t_initial_s;
 t_go_s = p.t_final_s - t_s;
 
@@ -65,12 +66,10 @@ ylabel('Standard Deviation of Acceleration (g)')
 ylim([0 15])
 grid on
 
-clc
 
 fprintf("Miss Distance: %.2f", sqrt(X(1,1)));
 
 results = results_table(log);
-
 runID = run_id(p);
 check = savedata("Homing Loop Covariance Analysis", results, fig, runID);
 
