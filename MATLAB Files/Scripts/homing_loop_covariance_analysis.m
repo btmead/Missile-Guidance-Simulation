@@ -2,13 +2,12 @@ clc
 clear
 close all
 
-addpath('C:\Users\benme\OneDrive - Yale University\Projects\Tactical and Strategic Missile Guidance\MATLAB Files')
 %% Parameters
 p.G = 9.81;
-p.nav_ratio = 5;
+p.nav_ratio = 3;
 p.time_constant = 1;
 p.t_final_s = 10;
-p.closing_vel_mps = 4000;
+p.closing_vel_mps = 1219;
 p.target_accel_mps2 = 3 * p.G;
 p.t_initial_s = 1e-5;
 p.h = 0.0001;
@@ -16,7 +15,6 @@ p.h = 0.0001;
 t_s = p.t_initial_s;
 t_go_s = p.t_final_s - t_s;
 
-F = F_time(t_go_s, p);
 Q = zeros([4,4]);
 Q(3,3) = power(p.target_accel_mps2,2) / p.t_final_s;
 
@@ -50,6 +48,7 @@ for step_idx = 1:num_steps
 end
 
 
+%% Results & Analysis
 fig = figure;
 tiledlayout(2,1)
 
@@ -70,7 +69,10 @@ clc
 
 fprintf("Miss Distance: %.2f", sqrt(X(1,1)));
 
-check = savedata("Homing Loop Covariance Analysis", [], p, fig);
+results = results_table(log);
+
+runID = run_id(p);
+check = savedata("Homing Loop Covariance Analysis", results, fig, runID);
 
 function Xd = adjoint_rhs(p, Q, X, t)
     t = p.t_final_s - t;
